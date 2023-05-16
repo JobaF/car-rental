@@ -7,12 +7,12 @@ interface HeroProps {}
 
 const Hero: FC<HeroProps> = ({}) => {
 	return (
-		<section className="min-h-[90vh] h-full flex flex-col justify-center items-center">
+		<section className="min-h-[94vh] h-full flex flex-col justify-center items-center">
 			<div className="flex flex-col lg:flex-row">
 				<Image
 					src={heroBg}
 					alt="bg-hero"
-					className="absolute -z-10 top-0 right-0 hidden lg:block"
+					className="absolute -z-10 top-0 right-0 lg:block hidden"
 				/>
 				<div className="flex flex-col justify-center p-4 mb-12 lg:mb-0 lg:text-left text-center">
 					<div className="font-bold text-2xl mb-3">Plan your trip now</div>
@@ -25,7 +25,7 @@ const Hero: FC<HeroProps> = ({}) => {
 						<br /> unlimited miles, flexible pick-up options and much more.
 					</div>
 					<div className="flex gap-5 lg:flex-row flex-col items-center lg:justify-start justify-center text-white font-bold">
-						<button className="flex gap-2 px-6 py-3 bg-orange-600 rounded-md lg:w-44 h-16 justify-center items-center w-56">
+						<button className="flex gap-2 px-6 py-3 bg-orange-600 rounded-md lg:w-44 h-12 justify-center items-center w-56">
 							Book Ride
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ const Hero: FC<HeroProps> = ({}) => {
 								/>
 							</svg>
 						</button>
-						<button className="flex gap-2 px-6 py-3 bg-black  rounded-md h-16 justify-center items-center lg:w-44 w-56">
+						<button className="flex gap-2 px-6 py-3 bg-black  rounded-md h-12 justify-center items-center lg:w-44 w-56">
 							Learn more
 							<svg
 								xmlns="http://www.w3.org/2000/svg"

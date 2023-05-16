@@ -3,9 +3,82 @@ import { FC } from "react"
 interface BookingCardProps {}
 
 const BookingCard: FC<BookingCardProps> = ({}) => {
+	const cars = [
+		"Audi A1",
+		"VW Golf 6",
+		"Toyota Camry",
+		"BMW 320",
+		"Mercedes-Benz GLK",
+		"VW Passat CC",
+	]
+	const locations = ["Berlin", "Cologne", "Dusseldorf", "Munich", "Dresden"]
+
 	return (
-		<div className="flex justify-center">
-			<div className="max-w-1/2 bg-red-200">Hallo</div>
+		<div className=" flex flex-col items-center mb-12">
+			<div className="w-4/6 shadow-xl border rounded-lg pt-5">
+				<h3 className="text-2xl text-center font-bold">Book a car</h3>
+				<div className="flex gap-5 mt-5 flex-wrap p-5">
+					<div className="flex flex-col gap-2 flex-grow basis-36">
+						<label className="text-lg">Car Type:</label>
+						<select id="car-selection">
+							<option selected value="">
+								Select your car type
+							</option>
+							{cars.map((car) => (
+								<option value={car}>{car}</option>
+							))}
+						</select>
+					</div>
+					<div className="flex flex-col gap-2 flex-grow basis-36">
+						<label className="text-lg">Pick Up:</label>
+						<select id="pick-up-selection">
+							<option selected value="">
+								Select pick up location
+							</option>
+							{locations.map((location) => (
+								<option value={location}>{location}</option>
+							))}
+						</select>
+					</div>
+					<div className="flex flex-col gap-2 flex-grow basis-36">
+						<label className="text-lg">Drop Off:</label>
+						<select id="drop-off-selection">
+							<option selected value="">
+								Select drop off location
+							</option>
+							{locations.map((location) => (
+								<option value={location}>{location}</option>
+							))}
+						</select>
+					</div>
+				</div>
+				<div className="flex gap-5 flex-wrap px-5 items-end pb-5">
+					<div className="flex flex-col gap-2 flex-grow basis-36">
+						<label className="text-lg">Pick Up Date:</label>
+						<select id="car-selection">
+							<option selected value="">
+								Pick Up Date
+							</option>
+						</select>
+					</div>
+					<div className="flex flex-col gap-2 flex-grow basis-36">
+						<label className="text-lg">Drop Off Date:</label>
+						<select id="pick-up-selection">
+							<option selected value="">
+								Drop Off Date
+							</option>
+							{locations.map((location) => (
+								<option value={location}>{location}</option>
+							))}
+						</select>
+					</div>
+					<div className="flex flex-col gap-2">
+						<button className="flex gap-2 px-6 py-3 bg-orange-600 rounded-md lg:w-44 h-12 justify-center items-center w-32 text-lg text-white font-bold">
+							Search
+						</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	)
 }
