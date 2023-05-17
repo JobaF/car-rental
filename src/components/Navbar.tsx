@@ -4,6 +4,7 @@ import { FC, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import HamburgerIcon from "@/components/HamburgerIcon"
+import logo from "../../public/car-rental-logo.png"
 
 interface NavbarProps {}
 
@@ -19,15 +20,10 @@ const Navbar: FC<NavbarProps> = ({}) => {
 	const isSignedIn = false
 	const [isOpen, setIsOpen] = useState(false)
 	return (
-		<div className="p-5 h-[5vh] flex lg:justify-evenly justify-between px-12 items-center text-lg">
+		<div className="pt-8 h-[5vh] flex lg:justify-evenly justify-between px-12 items-center text-lg">
 			{/* car rental logo */}
-			<Link href="">
-				<Image
-					width={128}
-					height={64}
-					src="/car-rental-logo.png"
-					alt="car rental logo"
-				/>
+			<Link href="" className="w-36 p-2">
+				<Image src={logo} alt="car rental logo" className="object-cover" />
 			</Link>
 			{/* car rental links */}
 			<div className="lg:flex hidden gap-3">

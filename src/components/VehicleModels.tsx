@@ -115,11 +115,11 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 				</p>
 				<div className="grid grid-cols-1 lg:grid-cols-5 gap-5 mt-8">
 					{/* Car selection */}
-					<div className="flex flex-col gap-2">
+					<div className="flex flex-col gap-2 items-center mb-4 md:mb-0">
 						{cars.map((car, i) => (
 							<div
 								key={car.model + i}
-								className={`text-lg font-bold w-full flex-grow flex items-center justify-center cursor-pointer ${
+								className={`text-lg font-bold w-3/4 md:w-full flex-grow flex items-center justify-center cursor-pointer ${
 									selectedCar === i
 										? "bg-orange-600 text-white"
 										: "hover:bg-orange-600 hover:text-white bg-slate-300"
@@ -131,24 +131,24 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 						))}
 					</div>
 					{/* Car picture - span 2 */}
-					<div className="lg:col-span-3 flex justify-center object-cover">
+					<div className="lg:col-span-3 flex justify-center object-cover items-center mb-4 md:mb-0">
 						{
 							<Image
-								className="object-contain"
+								className="object-contain "
 								src={cars[selectedCar].picture}
 								alt={cars[selectedCar].name}
 							/>
 						}
 					</div>
 					{/* Properties */}
-					<div className="flex flex-col">
-						<div className="text-lg font-bold w-full h-14 bg-orange-600 text-white flex justify-center items-center">
+					<div className="flex flex-col items-center">
+						<div className="text-lg font-bold w-3/4 md:w-full md:h-14 h-8 bg-orange-600 text-white flex justify-center items-center">
 							<span className="text-xl pr-2">
 								{"$" + cars[selectedCar].rentCostPerDay}
 							</span>{" "}
 							/ per day
 						</div>
-						<div className="mt-4 rounded-lg border p-2 flex flex-col border-slate-400 shadow-xl">
+						<div className="mt-4 rounded-lg border p-2 flex flex-col border-slate-400 shadow-xl w-3/4 md:w-full">
 							{Object.entries(cars[selectedCar])
 								.slice(1, -1)
 								.filter((item) => item[0] !== "picture")
@@ -167,7 +167,7 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 								))}
 						</div>
 						<button
-							className="text-lg font-bold w-full h-14 flex items-center justify-center cursor-pointer uppercase bg-orange-600 text-white mt-4 hover:bg-orange-700"
+							className="w-3/4 md:w-full text-lg font-bold h-14 flex items-center justify-center cursor-pointer uppercase bg-orange-600 text-white mt-4 hover:bg-orange-700"
 							onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 						>
 							Reserve now
