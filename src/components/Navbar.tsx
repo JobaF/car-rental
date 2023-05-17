@@ -33,6 +33,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
 			<div className="lg:flex hidden gap-3">
 				{navbarLinks.map((link) => (
 					<Link
+						key={link.name}
 						href={link.url}
 						className="p-2 text-md hover:underline hover:underline-offset-4"
 					>
@@ -59,6 +60,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
 				<div className="absolute flex flex-col p-5 text-lg gap-5 top-20 right-24 bg-slate-300 z-50 rounded-lg">
 					{navbarLinks.map((link) => (
 						<Link
+							key={link.name}
 							href={link.url}
 							className="hover:underline hover:underline-offset-4"
 						>

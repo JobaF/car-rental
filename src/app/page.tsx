@@ -4,9 +4,10 @@ import BookingCard from "@/components/BookingCard"
 
 export default function Home() {
 	return (
-		<main className="">
+		<main>
 			<Navbar />
 			<Hero />
+
 			<BookingCard />
 		</main>
 	)

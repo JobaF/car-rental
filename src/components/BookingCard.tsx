@@ -15,39 +15,39 @@ const BookingCard: FC<BookingCardProps> = ({}) => {
 
 	return (
 		<div className=" flex flex-col items-center mb-12">
-			<div className="w-4/6 shadow-xl border rounded-lg pt-5">
+			<div className="w-4/6 shadow-xl border rounded-xl pt-5">
 				<h3 className="text-2xl text-center font-bold">Book a car</h3>
 				<div className="flex gap-5 mt-5 flex-wrap p-5">
 					<div className="flex flex-col gap-2 flex-grow basis-36">
 						<label className="text-lg">Car Type:</label>
 						<select id="car-selection">
-							<option selected value="">
-								Select your car type
-							</option>
-							{cars.map((car) => (
-								<option value={car}>{car}</option>
+							<option value="">Select your car type</option>
+							{cars.map((car, i) => (
+								<option key={car + i} value={car}>
+									{car}
+								</option>
 							))}
 						</select>
 					</div>
 					<div className="flex flex-col gap-2 flex-grow basis-36">
 						<label className="text-lg">Pick Up:</label>
 						<select id="pick-up-selection">
-							<option selected value="">
-								Select pick up location
-							</option>
-							{locations.map((location) => (
-								<option value={location}>{location}</option>
+							<option value="">Select pick up location</option>
+							{locations.map((location, i) => (
+								<option key={location + i} value={location}>
+									{location}
+								</option>
 							))}
 						</select>
 					</div>
 					<div className="flex flex-col gap-2 flex-grow basis-36">
 						<label className="text-lg">Drop Off:</label>
 						<select id="drop-off-selection">
-							<option selected value="">
-								Select drop off location
-							</option>
-							{locations.map((location) => (
-								<option value={location}>{location}</option>
+							<option value="">Select drop off location</option>
+							{locations.map((location, i) => (
+								<option key={location.slice(3) + i} value={location}>
+									{location}
+								</option>
 							))}
 						</select>
 					</div>
@@ -56,17 +56,13 @@ const BookingCard: FC<BookingCardProps> = ({}) => {
 					<div className="flex flex-col gap-2 flex-grow basis-36">
 						<label className="text-lg">Pick Up Date:</label>
 						<select id="car-selection">
-							<option selected value="">
-								Pick Up Date
-							</option>
+							<option value="">Pick Up Date</option>
 						</select>
 					</div>
 					<div className="flex flex-col gap-2 flex-grow basis-36">
 						<label className="text-lg">Drop Off Date:</label>
 						<select id="pick-up-selection">
-							<option selected value="">
-								Drop Off Date
-							</option>
+							<option value="">Drop Off Date</option>
 							{locations.map((location) => (
 								<option value={location}>{location}</option>
 							))}
