@@ -34,7 +34,10 @@ const Features: FC<FeaturesProps> = ({}) => {
 				</h1>
 				<div className="grid grid-cols-1 lg:grid-cols-3 mt-12 gap-12">
 					{features.map((feature) => (
-						<div className="flex flex-col items-center gap-3 border rounded-lg p-5 shadow-lg">
+						<div
+							key={"feature " + feature.heading}
+							className="flex flex-col items-center gap-3 border rounded-lg p-5 shadow-lg"
+						>
 							<Image
 								src={feature.logo}
 								width={150}

@@ -63,9 +63,6 @@ const BookingCard: FC<BookingCardProps> = ({}) => {
 						<label className="text-lg">Drop Off Date:</label>
 						<select id="pick-up-selection">
 							<option value="">Drop Off Date</option>
-							{locations.map((location) => (
-								<option value={location}>{location}</option>
-							))}
 						</select>
 					</div>
 					<div className="flex flex-col gap-2">
