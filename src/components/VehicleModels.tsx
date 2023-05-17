@@ -101,7 +101,7 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 		},
 	]
 
-	const [selectedCar, setSelectedCar] = useState(0)
+	const [selectedCar, setSelectedCar] = useState(cars[0])
 
 	return (
 		<section className="flex flex-col items-center my-24">
@@ -120,11 +120,11 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 							<div
 								key={car.model + i}
 								className={`text-lg font-bold w-3/4 md:w-full flex-grow flex items-center justify-center cursor-pointer ${
-									selectedCar === i
+									selectedCar.name === car.name
 										? "bg-orange-600 text-white"
 										: "hover:bg-orange-600 hover:text-white bg-slate-300"
 								}`}
-								onClick={() => setSelectedCar(i)}
+								onClick={() => setSelectedCar(cars[i])}
 							>
 								{car.name}
 							</div>
@@ -135,8 +135,8 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 						{
 							<Image
 								className="object-contain "
-								src={cars[selectedCar].picture}
-								alt={cars[selectedCar].name}
+								src={selectedCar.picture}
+								alt={selectedCar.name}
 							/>
 						}
 					</div>
@@ -144,18 +144,18 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 					<div className="flex flex-col items-center">
 						<div className="text-lg font-bold w-3/4 md:w-full md:h-14 h-8 bg-orange-600 text-white flex justify-center items-center">
 							<span className="text-xl pr-2">
-								{"$" + cars[selectedCar].rentCostPerDay}
+								{"$" + selectedCar.rentCostPerDay}
 							</span>{" "}
 							/ per day
 						</div>
 						<div className="mt-4 rounded-lg border p-2 flex flex-col border-slate-400 shadow-xl w-3/4 md:w-full">
-							{Object.entries(cars[selectedCar])
+							{Object.entries(selectedCar)
 								.slice(1, -1)
 								.filter((item) => item[0] !== "picture")
 								.map((item) => (
 									<div
 										className="grid grid-cols-2 mt-2 justify-center items-center "
-										key={cars[selectedCar].name + item[0]}
+										key={selectedCar.name + item[0]}
 									>
 										<div className="first-letter:uppercase">
 											{item[0] as String}
