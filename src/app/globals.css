@@ -9,4 +9,9 @@
 		@apply p-2;
 		@apply bg-slate-200;
 	}
+
+	select {
+		@apply border;
+		@apply border-slate-300;
+	}
 }

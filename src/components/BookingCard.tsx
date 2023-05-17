@@ -14,9 +14,9 @@ const BookingCard: FC<BookingCardProps> = ({}) => {
 	const locations = ["Berlin", "Cologne", "Dusseldorf", "Munich", "Dresden"]
 
 	return (
-		<div className=" flex flex-col items-center mb-12">
-			<div className="w-4/6 shadow-xl border rounded-xl pt-5">
-				<h3 className="text-2xl text-center font-bold">Book a car</h3>
+		<div className="flex flex-col items-center mb-12">
+			<div className="w-full md:w-4/6 shadow-xl border border-slate-200 rounded-xl pt-5 max-w-6xl">
+				<h2 className="text-3xl text-center font-bold">Book a car</h2>
 				<div className="flex gap-5 mt-5 flex-wrap p-5">
 					<div className="flex flex-col gap-2 flex-grow basis-36">
 						<label className="text-lg">Car Type:</label>
