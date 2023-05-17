@@ -28,7 +28,7 @@ const Features: FC<FeaturesProps> = ({}) => {
 	return (
 		<section className="flex flex-col items-center my-24">
 			<div className="w-4/6 rounded-xl p-5 max-w-6xl ">
-				<h2 className="text-2xl text-center">Plan your trip now</h2>
+				<h2 className="text-2xl text-center mb-4">Plan your trip now</h2>
 				<h1 className="text-4xl text-center font-bold">
 					Quick & easy car rental
 				</h1>
@@ -45,7 +45,9 @@ const Features: FC<FeaturesProps> = ({}) => {
 							<h1 className="text-2xl font-bold text-center">
 								{feature.heading}
 							</h1>
-							<p className="text-md text-center">{feature.text}</p>
+							<p className="text-md text-center text-slate-600">
+								{feature.text}
+							</p>
 						</div>
 					))}
 				</div>
