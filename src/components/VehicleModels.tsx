@@ -8,7 +8,6 @@ import golfPicture from "../../public/golf6.jpg"
 import passatPicture from "../../public/passatcc.jpg"
 import type { StaticImageData } from "next/image"
 import Image from "next/image"
-import { redirect } from "next/dist/server/api-utils"
 
 interface VehicleModelsProps {}
 
@@ -137,6 +136,7 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 								className="object-contain "
 								src={selectedCar.picture}
 								alt={selectedCar.name}
+								placeholder="blur"
 							/>
 						}
 					</div>
