@@ -120,8 +120,8 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 								key={car.model + i}
 								className={`text-lg font-bold w-3/4 md:w-full flex-grow flex items-center justify-center cursor-pointer ${
 									selectedCar.name === car.name
-										? "bg-orange-600 text-white"
-										: "hover:bg-orange-600 hover:text-white bg-slate-300"
+										? "bg-orange-500 text-white"
+										: "hover:bg-orange-500 hover:text-white bg-slate-300"
 								}`}
 								onClick={() => setSelectedCar(cars[i])}
 							>
@@ -142,7 +142,7 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 					</div>
 					{/* Properties */}
 					<div className="flex flex-col items-center">
-						<div className="text-lg font-bold w-3/4 md:w-full md:h-14 h-8 bg-orange-600 text-white flex justify-center items-center">
+						<div className="text-lg font-bold w-3/4 md:w-full md:h-14 h-8 bg-orange-500 text-white flex justify-center items-center">
 							<span className="text-xl pr-2">
 								{"$" + selectedCar.rentCostPerDay}
 							</span>{" "}
@@ -167,7 +167,7 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 								))}
 						</div>
 						<button
-							className="w-3/4 md:w-full text-lg font-bold h-14 flex items-center justify-center cursor-pointer uppercase bg-orange-600 text-white mt-4 hover:bg-orange-700"
+							className="w-3/4 md:w-full text-lg font-bold h-14 flex items-center justify-center cursor-pointer uppercase bg-orange-500 text-white mt-4 hover:bg-orange-700"
 							onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 						>
 							Reserve now

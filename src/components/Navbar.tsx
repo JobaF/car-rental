@@ -43,7 +43,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
 					<button className="p-2 rounded-md px-4 border border-black hover:bg-black hover:text-white">
 						Sign In
 					</button>
-					<button className="bg-orange-500 hover:bg-orange-600 p-2 rounded-md px-4">
+					<button className="bg-orange-500 hover:bg-orange-500 p-2 rounded-md px-4">
 						Register
 					</button>
 				</div>

@@ -66,7 +66,7 @@ const BookingCard: FC<BookingCardProps> = ({}) => {
 						</select>
 					</div>
 					<div className="flex flex-col gap-2">
-						<button className="flex gap-2 px-6 py-3 bg-orange-600 rounded-md lg:w-44 h-12 justify-center items-center w-32 text-lg text-white font-bold">
+						<button className="flex gap-2 px-6 py-3 bg-orange-500 rounded-md lg:w-44 h-12 justify-center items-center w-32 text-lg text-white font-bold">
 							Search
 						</button>
 					</div>

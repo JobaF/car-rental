@@ -17,7 +17,7 @@ const Hero: FC<HeroProps> = ({}) => {
 				<div className="flex flex-col justify-center p-4 mb-12 lg:mb-0 lg:text-left text-center">
 					<div className="font-bold text-2xl mb-3">Plan your trip now</div>
 					<div className="text-6xl font-extrabold mb-9">
-						Save <span className=" text-orange-600">big</span> with our <br />{" "}
+						Save <span className=" text-orange-500">big</span> with our <br />{" "}
 						car rental
 					</div>
 					<div className="mb-9 text-slate-600">
@@ -25,7 +25,7 @@ const Hero: FC<HeroProps> = ({}) => {
 						<br /> unlimited miles, flexible pick-up options and much more.
 					</div>
 					<div className="flex gap-5 lg:flex-row flex-col items-center lg:justify-start justify-center text-white font-bold">
-						<button className="flex gap-2 px-6 py-3 bg-orange-600 rounded-md lg:w-44 h-12 justify-center items-center w-56">
+						<button className="flex gap-2 px-6 py-3 bg-orange-500 rounded-md lg:w-44 h-14 justify-center items-center w-56 shadow-md shadow-orange-500 hover:bg-orange-700">
 							Book Ride
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ const Hero: FC<HeroProps> = ({}) => {
 								/>
 							</svg>
 						</button>
-						<button className="flex gap-2 px-6 py-3 bg-black  rounded-md h-12 justify-center items-center lg:w-44 w-56">
+						<button className="flex gap-2 px-6 py-3 bg-black rounded-md h-14 justify-center items-center lg:w-44 w-56 shadow-md shadow-black">
 							Learn more
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
