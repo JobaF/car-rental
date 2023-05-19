@@ -10,13 +10,13 @@ const HamburgerIcon: FC<HamburgerIconProps> = ({ onClick, isOpen }) => {
 		<svg
 			id="hamburger-button"
 			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
+			fill=""
 			viewBox="0 0 24 24"
-			strokeWidth={1.5}
+			strokeWidth={2}
 			stroke="black"
 			className={`${
-				isOpen ? "bg-slate-300" : ""
-			} w-12 h-12 block lg:hidden cursor-pointer rounded-full p-1 hover:bg-slate-400`}
+				isOpen ? "bg-gray-300" : ""
+			} w-12 h-12 block lg:hidden cursor-pointer rounded-full p-1 hover:stroke-red-500`}
 			onClick={onClick}
 		>
 			<path

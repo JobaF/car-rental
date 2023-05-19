@@ -5,6 +5,7 @@ import Features from "@/components/Features"
 import VehicleModels from "@/components/VehicleModels"
 import Banner from "@/components/Banner"
 import ChooseUs from "@/components/ChooseUs"
+import Testimonials from "@/components/Testimonials"
 
 export default function Home() {
 	return (
@@ -16,6 +17,7 @@ export default function Home() {
 			<VehicleModels />
 			<Banner />
 			<ChooseUs />
+			<Testimonials />
 		</main>
 	)
 }
