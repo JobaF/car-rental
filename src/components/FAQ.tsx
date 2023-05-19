@@ -32,7 +32,7 @@ const FAQ: FC<FAQProps> = ({}) => {
 				</p>
 			</div>
 			<Accordion data={accordionData} />
-			<div className="absolute left-0 bottom-14 ">
+			<div className="absolute left-0 top-64 ">
 				<Image src={miniImg} alt="mini img" />
 			</div>
 		</div>
