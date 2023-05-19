@@ -19,8 +19,8 @@ const Features: FC<FeaturesProps> = ({}) => {
 			logo: featuresLogo2,
 		},
 		{
-			heading: "Let&apos;s Drive",
-			text: "Whether you&apos;re hitting the open road, we&apos;ve got you covered with our wide range of cars.",
+			heading: "Let's Drive",
+			text: "Whether you're hitting the open road, we've got you covered with our wide range of cars.",
 			logo: featuresLogo3,
 		},
 	]

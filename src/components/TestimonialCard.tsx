@@ -8,7 +8,7 @@ interface TestimonialCardProps {
 
 const TestimonialCard: FC<TestimonialCardProps> = ({ testimonial }) => {
 	return (
-		<div className="max-w-lg w-5/6 flex flex-col items-center py-3 md:py-6 px-4 md:px-12 rounded-md shadow-xl border">
+		<div className="max-w-lg w-5/6 flex flex-col items-center py-3 md:py-6 px-4 md:px-12 rounded-md shadow-xl border border-gray-200">
 			<p className="text-lg md:text-2xl"> {testimonial.text}</p>
 			<div className="flex items-center justify-between gap-3 w-full mt-4">
 				<div className="flex gap-3 items-center">
@@ -18,7 +18,7 @@ const TestimonialCard: FC<TestimonialCardProps> = ({ testimonial }) => {
 							alt={`profile picture ${testimonial.author}`}
 						/>
 					</div>
-					<div>
+					<div className="text-left">
 						<div className="font-bold text-md md:text-lg">
 							{testimonial.author}
 						</div>
