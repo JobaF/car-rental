@@ -22,7 +22,7 @@ const Testimonials: FC<TestimonialsProps> = ({}) => {
 			location: "Dusseldorf",
 		},
 		{
-			text: '"The car was in great condition and made our trip even better. Highly recommend for this car rental website! "',
+			text: '"The car was in great condition and made our trip even better. Highly recommend for this car rental website!"',
 			profilePicture: profilePicture2,
 			author: "Debbie O'Brien",
 			location: "Munich",
@@ -30,8 +30,8 @@ const Testimonials: FC<TestimonialsProps> = ({}) => {
 	]
 
 	return (
-		<div className=" max-w-7xl mx-auto text-center flex flex-col gap-5 mb-96">
-			<div className="max-w-3xl  flex flex-col gap-5 mx-auto">
+		<div className="max-w-7xl mx-auto text-center flex flex-col gap-5 mb-96">
+			<div className="px-5 max-w-3xl flex flex-col gap-5 mx-auto">
 				<h2 className="font-bold text-2xl -mb-2">Reviewed by people</h2>
 				<h1 className="text-5xl font-bold">Client&apos;s Testimonials</h1>
 				<p className="text-gray-500">
