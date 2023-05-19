@@ -20,7 +20,7 @@ const Accordion: FC<AccordionProps> = ({ data }) => {
 	}
 
 	return (
-		<div className="max-w-4xl w-5/6 mx-auto shadow-customAccordion">
+		<div className="z-20 max-w-4xl w-5/6 mx-auto shadow-customAccordion bg-white rounded-md">
 			{data?.map((item, i) => (
 				<div key={item.heading.slice(0, 5)}>
 					{/* Heading */}

@@ -1,5 +1,7 @@
 import { FC } from "react"
 import Accordion from "./Accordion"
+import miniImg from "../../public/mini.png"
+import Image from "next/image"
 
 interface FAQProps {}
 
@@ -20,7 +22,7 @@ const FAQ: FC<FAQProps> = ({}) => {
 	]
 
 	return (
-		<div className="max-w-7xl mx-auto text-center flex flex-col gap-5 mb-96">
+		<div className="relative mx-auto text-center flex flex-col gap-5 mb-96">
 			<div className="px-5 max-w-3xl flex flex-col gap-5 mx-auto mb-8">
 				<h2 className="font-bold text-2xl -mb-2">FAQ</h2>
 				<h1 className="text-5xl font-bold">Frequently Asked Questions</h1>
@@ -30,6 +32,9 @@ const FAQ: FC<FAQProps> = ({}) => {
 				</p>
 			</div>
 			<Accordion data={accordionData} />
+			<div className="absolute left-0 bottom-14 ">
+				<Image src={miniImg} alt="mini img" />
+			</div>
 		</div>
 	)
 }
