@@ -6,8 +6,8 @@ interface PageBannerProps {
 
 const PageBanner: FC<PageBannerProps> = ({ activeSite }) => {
 	return (
-		<div className="">
-			<div className="p-6 lg:p-3 max-w-7xl mx-auto gap-3 h-72 flex flex-col justify-center">
+		<div className="relative">
+			<div className="z-10 p-6 lg:p-3 max-w-7xl mx-auto gap-3 h-72 flex flex-col justify-center opacity-100">
 				<h1 className="text-4xl first-letter:uppercase font-bold">
 					{activeSite}
 				</h1>
