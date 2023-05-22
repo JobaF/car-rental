@@ -56,7 +56,7 @@ const page: FC<pageProps> = ({}) => {
 				<PageBanner activeSite="team" />
 				<div className="flex justify-around flex-wrap mb-24">
 					{team.map((member) => {
-						return <TeamCard props={member} />
+						return <TeamCard key={member.name} props={member} />
 					})}
 				</div>
 			</div>
