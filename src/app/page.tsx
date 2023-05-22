@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import BookingCard from "@/components/BookingCard"
 import Features from "@/components/Features"
@@ -8,12 +7,10 @@ import ChooseUs from "@/components/ChooseUs"
 import Testimonials from "@/components/Testimonials"
 import FAQ from "@/components/FAQ"
 import AppDownload from "@/components/AppDownload"
-import Footer from "@/components/Footer"
 
 export default function Home() {
 	return (
-		<main>
-			<Navbar />
+		<div>
 			<Hero />
 			<BookingCard />
 			<Features />
@@ -23,7 +20,6 @@ export default function Home() {
 			<Testimonials />
 			<FAQ />
 			<AppDownload />
-			<Footer />
-		</main>
+		</div>
 	)
 }

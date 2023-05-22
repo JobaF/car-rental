@@ -20,7 +20,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
 	const isSignedIn = false
 	const [isOpen, setIsOpen] = useState(false)
 	return (
-		<div className="pt-8 h-[5vh] flex lg:justify-evenly justify-between px-2 md:px-12 items-center text-lg">
+		<div className="pt-2 flex lg:justify-evenly justify-between items-center px-3 w-full">
 			{/* car rental logo */}
 			<Link href="" className="w-36 p-2">
 				<Image src={logo} alt="car rental logo" className="object-cover" />
@@ -53,7 +53,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
 				onClick={() => setIsOpen((prev) => !prev)}
 			/>
 			{isOpen && (
-				<div className="absolute flex flex-col p-5 text-lg gap-5 top-20 right-20 bg-gray-300 z-50 rounded-lg">
+				<div className="absolute flex flex-col p-5 text-lg gap-5 top-20 right-20 bg-gray-200 z-50 rounded-lg">
 					{navbarLinks.map((link) => (
 						<Link
 							key={link.name}

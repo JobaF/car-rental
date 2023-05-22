@@ -7,7 +7,7 @@ interface HeroProps {}
 
 const Hero: FC<HeroProps> = ({}) => {
 	return (
-		<section className="min-h-[95vh] h-full flex flex-col justify-center items-center">
+		<section className="min-h-screen h-full flex flex-col justify-center items-center">
 			<div className="flex flex-col lg:flex-row">
 				<Image
 					src={heroBg}

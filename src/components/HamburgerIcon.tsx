@@ -15,7 +15,7 @@ const HamburgerIcon: FC<HamburgerIconProps> = ({ onClick, isOpen }) => {
 			strokeWidth={2}
 			stroke="black"
 			className={`${
-				isOpen ? "bg-gray-300" : ""
+				isOpen ? "bg-gray-200" : ""
 			} w-12 h-12 block lg:hidden cursor-pointer rounded-full p-1 hover:stroke-red-500`}
 			onClick={onClick}
 		>

@@ -121,7 +121,7 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 								className={`text-lg font-bold w-3/4 md:w-full flex-grow flex items-center justify-center cursor-pointer ${
 									selectedCar.name === car.name
 										? "bg-orange-500 text-white"
-										: "hover:bg-orange-500 hover:text-white bg-slate-300"
+										: "hover:bg-orange-500 hover:text-white bg-gray-300"
 								}`}
 								onClick={() => setSelectedCar(cars[i])}
 							>
@@ -148,13 +148,13 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 							</span>{" "}
 							/ per day
 						</div>
-						<div className="mt-4 rounded-lg border p-2 flex flex-col border-slate-400 shadow-xl w-3/4 md:w-full">
+						<div className="mt-4 rounded-lg border p-2 gap-3 flex flex-col border-gray-400 shadow-xl w-3/4 md:w-full">
 							{Object.entries(selectedCar)
 								.slice(1, -1)
 								.filter((item) => item[0] !== "picture")
 								.map((item) => (
 									<div
-										className="grid grid-cols-2 mt-2 justify-center items-center "
+										className="grid grid-cols-2 justify-center items-center "
 										key={selectedCar.name + item[0]}
 									>
 										<div className="first-letter:uppercase">
