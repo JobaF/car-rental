@@ -20,7 +20,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
 	const isSignedIn = false
 	const [isOpen, setIsOpen] = useState(false)
 	return (
-		<div className="pt-2 flex lg:justify-evenly justify-between items-center px-3 w-full">
+		<div className="flex justify-between items-center px-3 max-w-7xl mx-auto py-2">
 			{/* car rental logo */}
 			<Link href="" className="w-36 p-2">
 				<Image src={logo} alt="car rental logo" className="object-cover" />

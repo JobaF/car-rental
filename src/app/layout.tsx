@@ -3,8 +3,6 @@ import { Inter } from "next/font/google"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 
-const inter = Inter({ subsets: ["latin"] })
-
 export const metadata = {
 	title: "Car rental",
 	description: "Rent a car for unbeatable prices",
@@ -17,10 +15,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body>
 				<Navbar />
-
-				{children}
+				<main>{children}</main>
 				<Footer />
 			</body>
 		</html>

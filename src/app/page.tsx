@@ -10,7 +10,7 @@ import AppDownload from "@/components/AppDownload"
 
 export default function Home() {
 	return (
-		<div>
+		<>
 			<Hero />
 			<BookingCard />
 			<Features />
@@ -20,6 +20,6 @@ export default function Home() {
 			<Testimonials />
 			<FAQ />
 			<AppDownload />
-		</div>
+		</>
 	)
 }
