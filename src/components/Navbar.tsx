@@ -31,7 +31,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
 					<Link
 						key={link.name}
 						href={link.url}
-						className="p-2 text-md hover:underline hover:underline-offset-4"
+						className="p-2 text-md hover:text-orange-500"
 					>
 						{link.name}
 					</Link>
@@ -43,7 +43,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
 					<button className="p-2 rounded-md px-4 border border-black hover:bg-black hover:text-white">
 						Sign In
 					</button>
-					<button className="bg-orange-500 hover:bg-orange-500 p-2 rounded-md px-4">
+					<button className="bg-orange-500 text-white hover:bg-orange-600 p-2 rounded-md px-4">
 						Register
 					</button>
 				</div>

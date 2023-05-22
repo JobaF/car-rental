@@ -15,7 +15,7 @@ const BookingCard: FC<BookingCardProps> = ({}) => {
 
 	return (
 		<div className="flex flex-col items-center mb-12">
-			<div className="w-full md:w-4/6 shadow-xl border border-slate-200 rounded-xl pt-5 max-w-6xl">
+			<div className="w-full md:w-4/6 shadow-xl border border-slate-200 rounded-xl pt-5 max-w-7xl">
 				<h2 className="text-3xl text-center font-bold">Book a car</h2>
 				<div className="flex gap-5 mt-5 flex-wrap p-5">
 					<div className="flex flex-col gap-2 flex-grow basis-36">

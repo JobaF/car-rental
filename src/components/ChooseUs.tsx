@@ -9,7 +9,7 @@ interface ChooseUsProps {}
 
 const ChooseUs: FC<ChooseUsProps> = ({}) => {
 	return (
-		<div className="flex justify-center items-center mb-48 flex-col text-center md:text-left">
+		<div className="flex justify-center items-center mb-36 flex-col text-center md:text-left">
 			<Image src={chooseHero} alt="choose us hero" />
 			{/* Text container */}
 			<div className="flex justify-center w-full p-5 flex-wrap gap-12">

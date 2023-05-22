@@ -7,6 +7,8 @@ import Banner from "@/components/Banner"
 import ChooseUs from "@/components/ChooseUs"
 import Testimonials from "@/components/Testimonials"
 import FAQ from "@/components/FAQ"
+import AppDownload from "@/components/AppDownload"
+import Footer from "@/components/Footer"
 
 export default function Home() {
 	return (
@@ -20,6 +22,8 @@ export default function Home() {
 			<ChooseUs />
 			<Testimonials />
 			<FAQ />
+			<AppDownload />
+			<Footer />
 		</main>
 	)
 }

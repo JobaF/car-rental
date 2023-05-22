@@ -27,7 +27,7 @@ const Features: FC<FeaturesProps> = ({}) => {
 
 	return (
 		<section className="flex flex-col items-center my-24">
-			<div className="w-4/6 rounded-xl p-5 max-w-6xl ">
+			<div className="w-4/6 rounded-xl p-5 max-w-7xl ">
 				<h2 className="text-2xl text-center mb-4">Plan your trip now</h2>
 				<h1 className="text-4xl text-center font-bold">
 					Quick & easy car rental
