@@ -11,7 +11,7 @@ interface AccordionData {
 }
 
 const Accordion: FC<AccordionProps> = ({ data }) => {
-	const [expandedItem, setExpandedItem] = useState<number | null>(null)
+	const [expandedItem, setExpandedItem] = useState<number | null>(0)
 
 	const handleAccordionClick = (id: number) => {
 		if (expandedItem !== id) {

@@ -56,9 +56,10 @@ const Navbar: FC<NavbarProps> = ({}) => {
 				<div className="absolute flex flex-col p-5 text-lg gap-5 top-20 right-20 bg-gray-200 z-50 rounded-lg">
 					{navbarLinks.map((link) => (
 						<Link
+							onClick={() => setIsOpen(false)}
 							key={link.name}
 							href={link.url}
-							className="hover:underline hover:underline-offset-4"
+							className="hover:text-orange-500 font-bold"
 						>
 							{link.name}
 						</Link>
