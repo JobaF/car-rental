@@ -11,7 +11,7 @@ import Image from "next/image"
 
 interface VehicleModelsProps {}
 
-type CarsType = {
+export type CarsType = {
 	name: string
 	picture: StaticImageData
 	model: string
