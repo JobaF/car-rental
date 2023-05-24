@@ -1,4 +1,4 @@
-<div align='center'><img style="width:30%" src='https://github.com/JobaF/car-rental/assets/57532845/1f4103cd-6187-4912-b106-5acfd2c96a44'/></div>
+<div align='center'><img style="width:30%" src='https://github.com/JobaF/car-rental/assets/57532845/1f4103cd-6187-4912-b106-5acfd2c96a44' /></div>
 
 <h2>About the project</h2>
 
@@ -16,7 +16,9 @@
 <h3 align='center'>Home Page 🏡</h3>
 
 <div align='center'>
-<img src='https://https://github.com/JobaF/car-rental/assets/57532845/8b219752-6eb5-416a-9c79-0826a3f22ad5' />
+<img src='https://https://github.com/JobaF/car-rental/assets/57532845/8b219752-6eb5-416a-9c79-0826a3f22ad5](https://github.com/JobaF/car-rental/assets/57532845/c5e73caa-36ee-4fc1-b841-1909111abb50' />
 
 </div>
+
+
 
