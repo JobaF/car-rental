@@ -10,15 +10,14 @@
 
 --> Next.js / React.js <br>
 --> TailwindCSS <br>
---> Image CDN: AWS <br>
---> Hosting: Vercel
+--> Hosting: Vercel <br>
 
 <h2>Screenshots of the Project 📸</h2>
 <br>
 <h3 align='center'>Home Page 🏡</h3>
 
 <div align='center'>
-<img src='[https://https://github.com/JobaF/car-rental/assets/57532845/8b219752-6eb5-416a-9c79-0826a3f22ad5](https://github.com/JobaF/car-rental/assets/57532845/c5e73caa-36ee-4fc1-b841-1909111abb50](https://d13m1rqoos03v0.cloudfront.net/screenshot_carrental.jpg)' />
+<img src='https://github.com/JobaF/car-rental/assets/57532845/6a98e8c8-8c51-4051-92d7-13ff7cd172bd' />
 
 </div>
 
