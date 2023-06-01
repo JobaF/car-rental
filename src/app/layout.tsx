@@ -1,11 +1,14 @@
 import "./globals.css"
-import { Inter } from "next/font/google"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
+import Head from "next/head"
 
 export const metadata = {
 	title: "Car rental",
 	description: "Rent a car for unbeatable prices",
+	icons: {
+		icon: "/favicon.png",
+	},
 }
 
 export default function RootLayout({

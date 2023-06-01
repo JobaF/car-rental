@@ -16,7 +16,9 @@ const VehicleBanner: FC<VehicleBannerProps> = ({ props }) => {
 		<div className="w-96 rounded-md overflow-hidden shadow-md border m-4">
 			<div className="">
 				<Image
-					src={props.picture}
+					src={props.picturePath}
+					width={382}
+					height={256}
 					alt="banner image"
 					className="h-64 object-cover"
 				/>

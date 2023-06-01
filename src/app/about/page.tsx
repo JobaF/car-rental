@@ -1,12 +1,9 @@
 import PageBanner from "@/components/PageBanner"
 import { FC } from "react"
 import Image from "next/image"
-import aboutImage from "../../../public/about.jpg"
-import aboutIcon1 from "../../../public/aboutIcon1.png"
-import aboutIcon2 from "../../../public/aboutIcon2.png"
-import aboutIcon3 from "../../../public/aboutIcon3.png"
 import Features from "@/components/Features"
 import Banner2 from "@/components/Banner2"
+import { HOSTNAME_CDN } from "@/utils/constants"
 
 interface AboutProps {}
 
@@ -17,7 +14,13 @@ const About: FC<AboutProps> = ({}) => {
 			<div className="max-w-7xl mx-auto p-5">
 				<div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 justify-center">
 					<div className="">
-						<Image src={aboutImage} alt="about image" className="rounded-lg" />
+						<Image
+							src={HOSTNAME_CDN + "about.jpg"}
+							width={424}
+							height={440}
+							alt="about image"
+							className="rounded-lg"
+						/>
 					</div>
 					<div className="flex flex-col gap-3 max-w-sm text-center">
 						<h2 className="text-2xl mb-1 ">About Company</h2>
@@ -34,7 +37,9 @@ const About: FC<AboutProps> = ({}) => {
 						<div className="grid grid-cols-3 p-3 items-center">
 							<div className="flex flex-col items-center">
 								<Image
-									src={aboutIcon1}
+									src={HOSTNAME_CDN + "aboutIcon1.png"}
+									width={64}
+									height={64}
 									alt="about icon 1"
 									className="h-16 object-contain"
 								/>
@@ -46,7 +51,9 @@ const About: FC<AboutProps> = ({}) => {
 							</div>
 							<div className="flex flex-col items-center">
 								<Image
-									src={aboutIcon2}
+									src={HOSTNAME_CDN + "aboutIcon2.png"}
+									width={64}
+									height={64}
 									alt="about icon 2"
 									className="h-16 object-contain"
 								/>
@@ -59,7 +66,9 @@ const About: FC<AboutProps> = ({}) => {
 							</div>
 							<div className="flex flex-col items-center">
 								<Image
-									src={aboutIcon3}
+									src={HOSTNAME_CDN + "aboutIcon3.png"}
+									width={64}
+									height={64}
 									alt="about icon 3"
 									className="h-16 object-contain"
 								/>

@@ -1,7 +1,6 @@
 import { FC } from "react"
 import Image from "next/image"
-import androidPicture from "../../public/googleplaybadge.png"
-import appstorePicture from "../../public/appstorebadge.png"
+import { HOSTNAME_CDN } from "@/utils/constants"
 
 interface AppDownloadProps {}
 
@@ -10,7 +9,7 @@ const AppDownload: FC<AppDownloadProps> = ({}) => {
 		<div
 			className="grid grid-cols-1 max-w-7xl mx-auto mb-48"
 			style={{
-				backgroundImage: 'url("/bg-download.png")',
+				backgroundImage: `url("${HOSTNAME_CDN}bg-download.png")`,
 				backgroundPosition: "top",
 				backgroundRepeat: "no-repeat",
 				backgroundSize: "cover",
@@ -28,10 +27,20 @@ const AppDownload: FC<AppDownloadProps> = ({}) => {
 				</p>
 				<div className="flex justify-start gap-8">
 					<div className="cursor-pointer">
-						<Image src={androidPicture} alt="android download picture" />
+						<Image
+							src={HOSTNAME_CDN + "googleplaybadge.png"}
+							width={227}
+							height={69}
+							alt="android download picture"
+						/>
 					</div>
 					<div className="cursor-pointer">
-						<Image src={appstorePicture} alt="android download picture" />
+						<Image
+							src={HOSTNAME_CDN + "appstorebadge.png"}
+							width={227}
+							height={69}
+							alt="android download picture"
+						/>
 					</div>
 				</div>
 			</div>

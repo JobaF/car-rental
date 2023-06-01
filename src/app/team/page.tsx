@@ -1,52 +1,46 @@
 import { FC } from "react"
 import PageBanner from "@/components/PageBanner"
-import teamPicture1 from "../../../public/team/team1.png"
-import teamPicture2 from "../../../public/team/team2.png"
-import teamPicture3 from "../../../public/team/team3.png"
-import teamPicture5 from "../../../public/team/team5.png"
-import teamPicture4 from "../../../public/team/team4.png"
-import teamPicture6 from "../../../public/team/team6.png"
-import { StaticImageData } from "next/image"
 import TeamCard from "./TeamCard"
 import Banner2 from "@/components/Banner2"
+import { HOSTNAME_CDN } from "@/utils/constants"
 
 interface pageProps {}
 export interface TeamMemberType {
 	name: string
 	job: string
-	image: StaticImageData
+	imagePath: string
 }
 const page: FC<pageProps> = ({}) => {
 	const team: TeamMemberType[] = [
 		{
 			name: "Luke Miller",
 			job: "Salesman",
-			image: teamPicture1,
+			imagePath: HOSTNAME_CDN + "team/team1.png",
 		},
 		{
 			name: "Michael Diaz",
 			job: "Business Owner",
-			image: teamPicture2,
+			imagePath: HOSTNAME_CDN + "team/team2.png",
 		},
 		{
 			name: "Briana Ross",
 			job: "Photographer",
-			image: teamPicture3,
+			imagePath: HOSTNAME_CDN + "team/team3.png",
 		},
 		{
 			name: "Lauren Rivera",
 			job: "Car Detailist",
-			image: teamPicture4,
+			imagePath: HOSTNAME_CDN + "team/team4.png",
 		},
 		{
 			name: "Martin Rizz",
 			job: "Mechanic",
-			image: teamPicture5,
+			imagePath: HOSTNAME_CDN + "team/team5.png",
 		},
 		{
 			name: "Caitlyn Hunt",
 			job: "Manager",
-			image: teamPicture6,
+			imagePath: HOSTNAME_CDN + "team/team6.png",
 		},
 	]
 

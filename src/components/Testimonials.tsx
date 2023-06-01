@@ -8,7 +8,7 @@ interface TestimonialsProps {}
 
 export interface Testimonial {
 	text: string
-	profilePicture: StaticImageData
+	profilePicturePath: string
 	author: string
 	location: string
 }
@@ -17,13 +17,13 @@ const Testimonials: FC<TestimonialsProps> = ({}) => {
 	const testimonials: Testimonial[] = [
 		{
 			text: '"We rented a car from this website and had an amazing experience! The booking was easy and the rental rates were very affordable."',
-			profilePicture: profilePicture1,
+			profilePicturePath: "profilePicture1.jpg",
 			author: "Ryan Florence",
 			location: "Dusseldorf",
 		},
 		{
 			text: '"The car was in great condition and made our trip even better. Highly recommend for this car rental website!"',
-			profilePicture: profilePicture2,
+			profilePicturePath: "profilePicture2.jpg",
 			author: "Debbie O'Brien",
 			location: "Munich",
 		},
