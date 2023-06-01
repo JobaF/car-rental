@@ -1,8 +1,6 @@
 import { FC } from "react"
-import featuresLogo1 from "../../public/features-logo1.png"
-import featuresLogo2 from "../../public/features-logo2.png"
-import featuresLogo3 from "../../public/features-logo3.png"
 import Image from "next/image"
+import { HOSTNAME_CDN } from "@/utils/constants"
 
 interface FeaturesProps {}
 
@@ -11,17 +9,17 @@ const Features: FC<FeaturesProps> = ({}) => {
 		{
 			heading: "Select Car",
 			text: "We offer a big range of vehicles for all your driving needs. We have the perfect car to meet your needs!",
-			logo: featuresLogo1,
+			logoPath: HOSTNAME_CDN + "features-logo1.png",
 		},
 		{
 			heading: "Contact Operator",
 			text: "Our knowledgeable and friendly operators are always ready to help with any questions or concerns.",
-			logo: featuresLogo2,
+			logoPath: HOSTNAME_CDN + "features-logo2.png",
 		},
 		{
 			heading: "Let's Drive",
 			text: "Whether you're hitting the open road, we've got you covered with our wide range of cars.",
-			logo: featuresLogo3,
+			logoPath: HOSTNAME_CDN + "features-logo3.png",
 		},
 	]
 
@@ -39,7 +37,7 @@ const Features: FC<FeaturesProps> = ({}) => {
 							className="flex flex-col items-center gap-3 border rounded-lg p-5 shadow-lg"
 						>
 							<Image
-								src={feature.logo}
+								src={feature.logoPath}
 								width={150}
 								height={150}
 								alt="Logo Select Car"

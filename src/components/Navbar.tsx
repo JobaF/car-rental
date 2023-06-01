@@ -4,7 +4,7 @@ import { FC, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import HamburgerIcon from "@/components/HamburgerIcon"
-import logo from "../../public/car-rental-logo.png"
+import { HOSTNAME_CDN } from "@/utils/constants"
 
 interface NavbarProps {}
 
@@ -23,7 +23,13 @@ const Navbar: FC<NavbarProps> = ({}) => {
 		<div className="flex justify-between items-center px-3 max-w-7xl mx-auto py-2">
 			{/* car rental logo */}
 			<Link href="" className="w-36 p-2">
-				<Image src={logo} alt="car rental logo" className="object-cover" />
+				<Image
+					src={HOSTNAME_CDN + "car-rental-logo.png"}
+					width={200}
+					height={200}
+					alt="car rental logo"
+					className="object-cover"
+				/>
 			</Link>
 			{/* car rental links */}
 			<div className="lg:flex hidden gap-3">

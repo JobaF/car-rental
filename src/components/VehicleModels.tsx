@@ -1,19 +1,13 @@
 "use client"
 import { FC, useState } from "react"
-import audiPicture from "../../public/audia1.jpg"
-import mercedesPicture from "../../public/benz.jpg"
-import toyotaPicture from "../../public/toyotacamry.jpg"
-import bmwPicture from "../../public/bmw320.jpg"
-import golfPicture from "../../public/golf6.jpg"
-import passatPicture from "../../public/passatcc.jpg"
-import type { StaticImageData } from "next/image"
 import Image from "next/image"
+import { HOSTNAME_CDN } from "@/utils/constants"
 
 interface VehicleModelsProps {}
 
 export type CarsType = {
 	name: string
-	picture: StaticImageData
+	picturePath: string
 	model: string
 	mark: string
 	year: string
@@ -28,7 +22,7 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 	const cars: CarsType[] = [
 		{
 			name: "Audi A1 S-Line",
-			picture: audiPicture,
+			picturePath: "audia1.jpg",
 			model: "Audi",
 			mark: "A1",
 			year: "2012",
@@ -40,7 +34,7 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 		},
 		{
 			name: "VW Golf 6",
-			picture: golfPicture,
+			picturePath: "golf6.jpg",
 			model: "Golf 6",
 			mark: "Volkswagen",
 			year: "2008",
@@ -52,7 +46,7 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 		},
 		{
 			name: "Toyota Camry",
-			picture: toyotaPicture,
+			picturePath: "toyotacamry.jpg",
 			model: "Camry",
 			mark: "Toyota",
 			year: "2008",
@@ -64,7 +58,7 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 		},
 		{
 			name: "BMW 320 ModernLine",
-			picture: bmwPicture,
+			picturePath: "bmw320.jpg",
 			model: "320",
 			mark: "BMW",
 			year: "2012",
@@ -76,7 +70,7 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 		},
 		{
 			name: "Mercedes-Benz GLK",
-			picture: mercedesPicture,
+			picturePath: "benz.jpg",
 			model: "Benz GLK",
 			mark: "Mercedes",
 			year: "2006",
@@ -88,7 +82,7 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 		},
 		{
 			name: "VW Passat CC",
-			picture: passatPicture,
+			picturePath: "passatcc.jpg",
 			model: "Passat CC",
 			mark: "Volkswagen",
 			year: "2008",
@@ -134,9 +128,10 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 						{
 							<Image
 								className="object-contain "
-								src={selectedCar.picture}
+								src={HOSTNAME_CDN + selectedCar.picturePath}
+								width={550}
+								height={300}
 								alt={selectedCar.name}
-								placeholder="blur"
 							/>
 						}
 					</div>
@@ -151,7 +146,7 @@ const VehicleModels: FC<VehicleModelsProps> = ({}) => {
 						<div className="mt-4 rounded-lg border p-2 gap-3 flex flex-col border-gray-400 shadow-xl w-3/4 md:w-full">
 							{Object.entries(selectedCar)
 								.slice(1, -1)
-								.filter((item) => item[0] !== "picture")
+								.filter((item) => item[0] !== "picturePath")
 								.map((item) => (
 									<div
 										className="grid grid-cols-2 justify-center items-center "

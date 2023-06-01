@@ -9,6 +9,7 @@ import golfImageVehicles from "../../../public/vehicleModels/golfVehicleModels.j
 import bmwImageVehicles from "../../../public/vehicleModels/bmwVehicleModels.jpg"
 import { CarsType } from "@/components/VehicleModels"
 import Banner2 from "@/components/Banner2"
+import { HOSTNAME_CDN } from "@/utils/constants"
 
 interface VehiclesProps {}
 
@@ -16,7 +17,7 @@ const Vehicles: FC<VehiclesProps> = ({}) => {
 	const cars: CarsType[] = [
 		{
 			name: "Audi A1",
-			picture: audiImageVehicles,
+			picturePath: HOSTNAME_CDN + "vehicleModels/audiVehicleModels.jpg",
 			model: "Audi",
 			mark: "A1",
 			year: "2012",
@@ -28,7 +29,7 @@ const Vehicles: FC<VehiclesProps> = ({}) => {
 		},
 		{
 			name: "VW Golf 6",
-			picture: golfImageVehicles,
+			picturePath: HOSTNAME_CDN + "vehicleModels/golfVehicleModels.jpg",
 			model: "Golf 6",
 			mark: "Volkswagen",
 			year: "2008",
@@ -40,7 +41,7 @@ const Vehicles: FC<VehiclesProps> = ({}) => {
 		},
 		{
 			name: "Toyota Camry",
-			picture: toyotaImageVehicles,
+			picturePath: HOSTNAME_CDN + "vehicleModels/toyotaVehicleModels.jpg",
 			model: "Camry",
 			mark: "Toyota",
 			year: "2008",
@@ -52,7 +53,7 @@ const Vehicles: FC<VehiclesProps> = ({}) => {
 		},
 		{
 			name: "BMW 320 ModernLine",
-			picture: bmwImageVehicles,
+			picturePath: HOSTNAME_CDN + "vehicleModels/bmwVehicleModels.jpg",
 			model: "320",
 			mark: "BMW",
 			year: "2012",
@@ -64,7 +65,7 @@ const Vehicles: FC<VehiclesProps> = ({}) => {
 		},
 		{
 			name: "Mercedes-Benz GLK",
-			picture: benzImageVehicles,
+			picturePath: HOSTNAME_CDN + "vehicleModels/benzVehicleModels.jpg",
 			model: "Benz GLK",
 			mark: "Mercedes",
 			year: "2006",
@@ -76,7 +77,7 @@ const Vehicles: FC<VehiclesProps> = ({}) => {
 		},
 		{
 			name: "VW Passat CC",
-			picture: passatImageVehicles,
+			picturePath: HOSTNAME_CDN + "vehicleModels/passatVehicleModels.jpg",
 			model: "Passat CC",
 			mark: "Volkswagen",
 			year: "2008",
@@ -89,17 +90,19 @@ const Vehicles: FC<VehiclesProps> = ({}) => {
 	]
 
 	return (
-		<div className="mx-auto max-w-7xl">
-			<PageBanner activeSite="vehicles" />
-			<div className="flex justify-around flex-wrap mb-24">
-				{cars.map((car, i) => (
-					<div key={car.model + i}>
-						<VehicleBanner props={car} />
-					</div>
-				))}
+		<>
+			<div className="mx-auto max-w-7xl">
+				<PageBanner activeSite="vehicles" />
+				<div className="flex justify-around flex-wrap mb-24">
+					{cars.map((car, i) => (
+						<div key={car.model + i}>
+							<VehicleBanner props={car} />
+						</div>
+					))}
+				</div>
 			</div>
 			<Banner2 />
-		</div>
+		</>
 	)
 }
 

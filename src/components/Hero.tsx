@@ -1,7 +1,7 @@
 import { FC } from "react"
 import Image from "next/image"
-import carHero from "../../public/car-hero.png"
-import heroBg from "../../public/hero-bg.png"
+
+import { HOSTNAME_CDN } from "@/utils/constants"
 
 interface HeroProps {}
 
@@ -10,7 +10,9 @@ const Hero: FC<HeroProps> = ({}) => {
 		<section className="min-h-screen h-full flex flex-col justify-center items-center">
 			<div className="flex flex-col lg:flex-row">
 				<Image
-					src={heroBg}
+					src={HOSTNAME_CDN + "hero-bg.png"}
+					width={680}
+					height={870}
 					alt="bg-hero"
 					className="absolute -z-10 top-0 right-0 lg:block hidden"
 				/>
@@ -62,7 +64,13 @@ const Hero: FC<HeroProps> = ({}) => {
 					</div>
 				</div>
 				<div className="hidden lg:block">
-					<Image src={carHero} alt="hero car image" className="col-span-2" />
+					<Image
+						src={HOSTNAME_CDN + "car-hero.png"}
+						width={922}
+						height={525}
+						alt="hero car image"
+						className="col-span-2"
+					/>
 				</div>
 			</div>
 		</section>

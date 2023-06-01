@@ -1,16 +1,18 @@
 import { FC } from "react"
-import chooseHero from "../../public/chooseHero.png"
-import chooseUsIcon1 from "../../public/chooseUsIcon1.png"
-import chooseUsIcon2 from "../../public/chooseUsIcon2.png"
-import chooseUsIcon3 from "../../public/chooseUsIcon3.png"
 import Image from "next/image"
+import { HOSTNAME_CDN } from "@/utils/constants"
 
 interface ChooseUsProps {}
 
 const ChooseUs: FC<ChooseUsProps> = ({}) => {
 	return (
 		<div className="flex justify-center items-center mb-36 flex-col text-center md:text-left">
-			<Image src={chooseHero} alt="choose us hero" />
+			<Image
+				src={HOSTNAME_CDN + "chooseHero.png"}
+				alt="choose us hero"
+				width={900}
+				height={440}
+			/>
 			{/* Text container */}
 			<div className="flex justify-center w-full p-5 flex-wrap gap-12">
 				<div className="flex flex-col gap-6 md:gap-3 max-w-xl mb-12 lg:mb-0 justify-around">
@@ -46,7 +48,12 @@ const ChooseUs: FC<ChooseUsProps> = ({}) => {
 				</div>
 				<div className="flex flex-col gap-12 max-w-xl">
 					<div className="flex items-center flex-col lg:flex-row gap-3 max-w-md">
-						<Image src={chooseUsIcon1} alt={"choose us icon 1"} />
+						<Image
+							src={HOSTNAME_CDN + "chooseUsIcon1.png"}
+							height={100}
+							width={100}
+							alt={"choose us icon 1"}
+						/>
 
 						<div>
 							<h2 className="font-bold text-2xl mb-2">Cross Country Drive</h2>{" "}
@@ -57,7 +64,12 @@ const ChooseUs: FC<ChooseUsProps> = ({}) => {
 						</div>
 					</div>
 					<div className="flex items-center flex-col lg:flex-row gap-3 max-w-md">
-						<Image src={chooseUsIcon2} alt={"choose us icon 2"} />
+						<Image
+							src={HOSTNAME_CDN + "chooseUsIcon2.png"}
+							height={100}
+							width={100}
+							alt={"choose us icon 2"}
+						/>
 						<div>
 							<h2 className="font-bold text-2xl mb-2">All Inclusive Pricing</h2>{" "}
 							<p className="text-gray-500">
@@ -67,7 +79,12 @@ const ChooseUs: FC<ChooseUsProps> = ({}) => {
 						</div>
 					</div>
 					<div className="flex items-center flex-col lg:flex-row gap-3 max-w-md">
-						<Image src={chooseUsIcon3} alt={"choose us icon 3"} />
+						<Image
+							src={HOSTNAME_CDN + "chooseUsIcon3.png"}
+							height={100}
+							width={100}
+							alt={"choose us icon 3"}
+						/>
 						<div>
 							<h2 className="font-bold text-2xl mb-2">No Hidden Charges</h2>{" "}
 							<p className="text-gray-500">

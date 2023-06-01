@@ -1,6 +1,7 @@
 import { FC } from "react"
 import { Testimonial } from "./Testimonials"
 import Image from "next/image"
+import { HOSTNAME_CDN } from "@/utils/constants"
 
 interface TestimonialCardProps {
 	testimonial: Testimonial
@@ -8,13 +9,15 @@ interface TestimonialCardProps {
 
 const TestimonialCard: FC<TestimonialCardProps> = ({ testimonial }) => {
 	return (
-		<div className="max-w-lg w-5/6 flex flex-col items-center py-3 md:py-6 px-4 md:px-12 rounded-md shadow-xl border border-gray-300">
+		<div className="max-w-lg w-5/6 flex flex-col justify-between items-center py-3 md:py-6 px-4 md:px-12 rounded-md shadow-xl border border-gray-300">
 			<p className="text-lg md:text-2xl"> {testimonial.text}</p>
 			<div className="flex items-center justify-between gap-3 w-full mt-4">
 				<div className="flex gap-3 items-center">
 					<div className="w-16 h-16 rounded-full overflow-hidden">
 						<Image
-							src={testimonial.profilePicture}
+							src={HOSTNAME_CDN + testimonial.profilePicturePath}
+							width={64}
+							height={64}
 							alt={`profile picture ${testimonial.author}`}
 						/>
 					</div>

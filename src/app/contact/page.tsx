@@ -1,7 +1,7 @@
 import { FC } from "react"
 import PageBanner from "@/components/PageBanner"
 import Image from "next/image"
-import cologneImage from "../../../public/cologne.jpg"
+import { HOSTNAME_CDN } from "@/utils/constants"
 
 interface pageProps {}
 
@@ -11,7 +11,9 @@ const page: FC<pageProps> = ({}) => {
 			<PageBanner activeSite="contact" />
 			<div className="max-w-7xl mx-auto grid md:grid-cols-2 grid-cols-1 ">
 				<Image
-					src={cologneImage}
+					src={HOSTNAME_CDN + "cologne.jpg"}
+					width={1280}
+					height={272}
 					alt="google maps cologne"
 					className="h-72 object-cover mx-auto mt-4 mb-8 md:col-span-2 p-3"
 				/>

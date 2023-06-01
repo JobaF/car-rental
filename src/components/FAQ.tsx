@@ -1,7 +1,8 @@
 import { FC } from "react"
 import Accordion from "./Accordion"
-import miniImg from "../../public/mini.png"
+
 import Image from "next/image"
+import { HOSTNAME_CDN } from "@/utils/constants"
 
 interface FAQProps {}
 
@@ -33,7 +34,12 @@ const FAQ: FC<FAQProps> = ({}) => {
 			</div>
 			<Accordion data={accordionData} />
 			<div className="absolute left-0 top-64 ">
-				<Image src={miniImg} alt="mini img" />
+				<Image
+					src={HOSTNAME_CDN + "mini.png"}
+					width={388}
+					height={312}
+					alt="mini img"
+				/>
 			</div>
 		</div>
 	)

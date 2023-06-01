@@ -1,6 +1,6 @@
 import { FC } from "react"
-import bannerImage2 from "../../public/banner2.png"
 import Image from "next/image"
+import { HOSTNAME_CDN } from "@/utils/constants"
 
 interface Banner2Props {}
 
@@ -8,12 +8,16 @@ const Banner2: FC<Banner2Props> = ({}) => {
 	return (
 		<div className="w-full relative text-white py-14 text-center px-5 bg-black overflow-hidden opacity-90 ">
 			<Image
-				src={bannerImage2}
+				src={HOSTNAME_CDN + "banner2.png"}
+				width={1600}
+				height={178}
 				alt="bannerImage2"
 				className="absolute -z-10 top-0 object-fill opacity-20"
 			/>
 			<Image
-				src={bannerImage2}
+				src={HOSTNAME_CDN + "banner2.png"}
+				width={1600}
+				height={178}
 				alt="bannerImage2"
 				className="absolute -z-10 right-0 top-0 translate-x-96 object-fill opacity-20"
 			/>
